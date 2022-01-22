@@ -13,9 +13,11 @@ def fizzbuzz(number):
 
 
 def second_largest(numbers):
-    second_largest = 0
+    second_largest = 'a'
     for number in numbers:
-        if(number > second_largest and number != max(numbers)):
+        if(second_largest == 'a' and number != max(numbers)):
+            second_largest = number
+        elif(number > second_largest and number != max(numbers)):
             second_largest = number
     print(second_largest)
 
@@ -29,37 +31,39 @@ def avg_of_positive(numbers):
         if(number > 0):
             sum = sum + number
             count = count + 1
-    print(sum/count)
+    return(sum/count)
 
 # Write a function that takes in an array of numbers and return True if the array is sorted largest to smallest and False otherwise
 
 
 def validate_big_to_small(numbers):
-    x = 0
+    x = 'a'
     for number in numbers:
-        if(x == 0):
+        if(x == 'a'):
             x = number
         elif(x < number):
-            print('false')
+            print(False)
             return
-    print('true')
+    print(True)
 
 # Write a function that takes in a string and returns True if the string's length is greater than 10 and False otherwise
 
+
 def string_over_ten(numbers):
     if(len(numbers) > 10):
-        print('true')
+        print(True)
     else:
-        print('false')
+        print(False)
 
 
 # nums are here
+zeros = [0, 0, 0, 0]
 nums = [13, 14, 61, 87, 75, 22, 54, 86, 54, 75, 23, 87, 55, 11,
         545253, 6727257, 2345234, 72825, 4272576, 245445, 7828282850, -27451291, -4581, -5, -851, -93]
 
 big_to_small = [451451451, 34134, 3432, 342, 64, 45, 23, 12, 9, 5, 2]
 
-less_than_ten = [21412,-3525,35623,-675,326,5,-4]
+less_than_ten = [21412, -3525, 35623, -675, 326, 5, -4]
 # This function will:
 #       print "Fizz" if the number is divisible by 3
 #       print "Buzz" if the number is divisible by 5
@@ -68,13 +72,13 @@ less_than_ten = [21412,-3525,35623,-675,326,5,-4]
 # for num in nums:
 #     fizzbuzz(num)
 
-# second_largest(nums)
+# second_largest(big_to_small)
 
-# avg_of_positive(nums)
+# print(avg_of_positive(nums))
 
-# validate_big_to_small(nums)
+validate_big_to_small(zeros)
 # validate_big_to_small(big_to_small)
 
-string_over_ten(nums)
-string_over_ten(big_to_small)
-string_over_ten(less_than_ten)
+# string_over_ten(nums)
+# string_over_ten(big_to_small)
+# string_over_ten(less_than_ten)
