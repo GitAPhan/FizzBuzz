@@ -26,8 +26,8 @@ def second_largest(numbers):
         elif(number > largest):
             second_largest = largest
             largest = number
-        elif(number > largest and number > second_largest):
-            second_largest = largest
+        elif(number < largest and number > second_largest):
+            second_largest = number
     return second_largest
     
 # #     #     if(second_largest == 'a' and number != max(numbers)):
@@ -66,9 +66,9 @@ def validate_big_to_small(numbers):
 
 def string_over_ten(numbers):
     if(len(numbers) > 10):
-        print(True)
+        return True
     else:
-        print(False)
+        return False
 
 
 # nums are here
@@ -97,7 +97,7 @@ print(second_largest(nums))
 # print(validate_big_to_small([4,3,2,3]))
 # validate_big_to_small(big_to_small)
 
-# string_over_ten(nums)
-# string_over_ten(big_to_small)
-# string_over_ten(string)
-# string_over_ten(short_string)
+# print(string_over_ten(nums))
+# print(string_over_ten(big_to_small))
+# print(string_over_ten(string))
+# print(string_over_ten(short_string))
