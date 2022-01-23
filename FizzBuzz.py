@@ -23,10 +23,10 @@ def second_largest(numbers):
             largest = number
         elif(second_largest == 'a' and number < largest):
             second_largest = number
-        elif(number > largest):
+        elif(number >= largest):
             second_largest = largest
             largest = number
-        elif(number < largest and number > second_largest):
+        elif(number > second_largest):
             second_largest = number
     return second_largest
     
@@ -80,6 +80,8 @@ big_to_small = [451451451, 34134, 3432, 342, 64, 45, 23, 12, 9, 5, 2]
 
 less_than_ten = [21412, -3525, 35623, -675, 326, 5, -4]
 
+forty_five = [45, 45, 45, 45]
+
 string = 'this is a string'
 short_string = 'string'
 # This function will:
@@ -90,7 +92,9 @@ short_string = 'string'
 # for num in nums:
 #     fizzbuzz(num)
 
-print(second_largest(nums))
+print(second_largest(zeros))
+
+
 
 # print(avg_of_positive(nums))
 
