@@ -12,14 +12,17 @@ def fizzbuzz(number):
 # Write a function that takes in an array of numbers and returns the 2ND largest number
 
 
-def second_largest(numbers):
-    second_largest = 'a'
-    for number in numbers:
-        if(second_largest == 'a' and number != max(numbers)):
-            second_largest = number
-        elif(number > second_largest and number != max(numbers)):
-            second_largest = number
-    print(second_largest)
+# def second_largest(numbers):
+#     largest = 'a'
+#     second_largest = 'a'
+#     for number in numbers:
+# #     #     if(second_largest == 'a' and number != max(numbers)):
+# #     #         second_largest = number
+# #     #     elif(number > second_largest and number != max(numbers)):
+# #     #         second_largest = number
+#         if(largest = 'a'):
+#             largest = number
+#     print(second_largest)
 
 # Write a function that takes in an array of numbers and returns the average of ONLY POSITIVE numbers
 
@@ -42,9 +45,10 @@ def validate_big_to_small(numbers):
         if(x == 'a'):
             x = number
         elif(x < number):
-            print(False)
-            return
-    print(True)
+            return False
+        else:
+            x = number        
+    return True
 
 # Write a function that takes in a string and returns True if the string's length is greater than 10 and False otherwise
 
@@ -64,6 +68,9 @@ nums = [13, 14, 61, 87, 75, 22, 54, 86, 54, 75, 23, 87, 55, 11,
 big_to_small = [451451451, 34134, 3432, 342, 64, 45, 23, 12, 9, 5, 2]
 
 less_than_ten = [21412, -3525, 35623, -675, 326, 5, -4]
+
+string = 'this is a string'
+short_string = 'string'
 # This function will:
 #       print "Fizz" if the number is divisible by 3
 #       print "Buzz" if the number is divisible by 5
@@ -76,9 +83,10 @@ less_than_ten = [21412, -3525, 35623, -675, 326, 5, -4]
 
 # print(avg_of_positive(nums))
 
-validate_big_to_small(zeros)
+print(validate_big_to_small([4,1,2]))
 # validate_big_to_small(big_to_small)
 
 # string_over_ten(nums)
 # string_over_ten(big_to_small)
-# string_over_ten(less_than_ten)
+# string_over_ten(string)
+# string_over_ten(short_string)
