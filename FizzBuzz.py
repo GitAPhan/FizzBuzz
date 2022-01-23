@@ -1,4 +1,7 @@
 # fizzbuzz function
+from tokenize import Number
+
+
 def fizzbuzz(number):
     if((number % 3 == 0) and (number % 5 == 0)):
         print(number, ': FizzBuzz')
@@ -12,17 +15,25 @@ def fizzbuzz(number):
 # Write a function that takes in an array of numbers and returns the 2ND largest number
 
 
-# def second_largest(numbers):
-#     largest = 'a'
-#     second_largest = 'a'
-#     for number in numbers:
+def second_largest(numbers):
+    largest = 'a'
+    second_largest = 'a'
+    for number in numbers:
+        if(largest == 'a'):
+            largest = number
+        elif(second_largest == 'a' and number < largest):
+            second_largest = number
+        elif(number > largest):
+            second_largest = largest
+            largest = number
+        elif(number > largest and number > second_largest):
+            second_largest = largest
+    return second_largest
+    
 # #     #     if(second_largest == 'a' and number != max(numbers)):
 # #     #         second_largest = number
 # #     #     elif(number > second_largest and number != max(numbers)):
 # #     #         second_largest = number
-#         if(largest = 'a'):
-#             largest = number
-#     print(second_largest)
 
 # Write a function that takes in an array of numbers and returns the average of ONLY POSITIVE numbers
 
@@ -79,11 +90,11 @@ short_string = 'string'
 # for num in nums:
 #     fizzbuzz(num)
 
-# second_largest(big_to_small)
+print(second_largest(nums))
 
 # print(avg_of_positive(nums))
 
-print(validate_big_to_small([4,1,2]))
+# print(validate_big_to_small([4,3,2,3]))
 # validate_big_to_small(big_to_small)
 
 # string_over_ten(nums)
